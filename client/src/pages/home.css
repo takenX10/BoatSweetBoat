@@ -1,0 +1,14 @@
+
+.heading-image {
+    width: 100vw;
+    height: 50vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url('http://localhost:3000/images/boat.jpeg'); /* TODO: cambia questo link */
+}
+
+
+.text-justify {
+    text-align: justify;
+}
