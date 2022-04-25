@@ -23,4 +23,4 @@ A website for our friend's boat business
 - Avventura grafica (Esplora barca)
 - Footer immagini
 - Contatti
-- Sentire marta per i testi e le immagini
+- Sentire marta per i testi e le immagini e collegamenti social
