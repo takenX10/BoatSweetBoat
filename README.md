@@ -24,3 +24,6 @@ A website for our friend's boat business
 - Footer immagini
 - Contatti
 - Sentire marta per i testi e le immagini e collegamenti social
+
+## Siti carini da cui prendere ispirazione
+https://manuelavitulli.com/  

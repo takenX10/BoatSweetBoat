@@ -23,7 +23,10 @@ const Footer = () => {
                             <div className="col-lg-4 col-md-6 footer-info">
                                 <h3>ABOUT Marta</h3>
                                 <p>Per Marta la vela, oltre che sport e lavoro, è il sogno di vivere in mare. Infatti a 28 anni ha lasciato la terraferma per vivere nella sua "barca dolce barca" e si prepara per il grande sogno: il giro del mondo. Seguitela per viaggiare con lei.</p>
-                                <div className="social-links mt-3"><a href="#" className="twitter"><i className="fab fa-twitter"></i></a> <a href="https://www.facebook.com/martamagnano.boatsweetboat" className="facebook"><i className="fab fa-facebook"></i></a> <a href="https://www.instagram.com/marta_magnano/" className="instagram"><i className="fa-brands fa-instagram"></i></a> <a href="#" className="linkedin"><i className="fab fa-linkedin"></i></a> </div>
+                                <div className="social-links mt-3">
+                                    <a href="#" className="twitter"><i className="fab fa-twitter"></i></a>
+                                    <a href="https://www.facebook.com/martamagnano.boatsweetboat" className="facebook"><i className="fab fa-facebook"></i></a> <a href="https://www.instagram.com/marta_magnano/" className="instagram"><i className="fa-brands fa-instagram"></i></a>
+                                    <a href="#" className="linkedin"><i className="fab fa-linkedin"></i></a> </div>
                             </div>
                         </div>
                     </div>

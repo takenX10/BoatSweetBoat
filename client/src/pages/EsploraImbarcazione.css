@@ -1,0 +1,30 @@
+
+body {
+    background-color: black;
+}
+.full-button {
+    align-items: center;
+    border: 5px solid white;
+    color: white;
+    background-color: transparent;
+    min-height: 30vh;
+    transition: .3s;
+}
+
+.full-button:hover{
+    scale: 1.05;
+    color:beige;
+    border-color: beige;
+}
+
+@media (min-width: 768px) {
+    .heading-container {
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    
+}
+.buttons-container {
+    height: 100vh;
+}
