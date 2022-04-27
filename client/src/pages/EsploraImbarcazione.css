@@ -1,6 +1,6 @@
 
 body {
-    background-color: black;
+    background-color: #D4F1F4;
 }
 .full-button {
     align-items: center;
@@ -16,8 +16,10 @@ body {
     color:beige;
     border-color: beige;
 }
-
-@media (min-width: 768px) {
+.buttons-container {
+    height: 100vh;
+}
+@media (min-width: 768px) { /* Standard medium bootstrap media size */
     .heading-container {
         position: absolute;
         top: 0;
@@ -25,6 +27,30 @@ body {
     }
     
 }
-.buttons-container {
-    height: 100vh;
+
+
+/* Scorrimento */
+
+.card-container {
+    background-color: #189AB4;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    box-shadow: 10px -10px 15px #75E6DA;
+    border-radius: 15px;
+}
+
+.card-image{
+    width: 100vw;
+    max-height: 75vh;
+    object-fit:contain;
+    object-position: center;
+}
+
+.card-position{
+    color: snow;
+}
+
+.card-description{
+    color: snow;
 }

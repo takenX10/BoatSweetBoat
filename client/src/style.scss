@@ -1,4 +1,7 @@
 $primary: purple;
 $danger: orange;
 
+body {
+    background-color:#89c4f4;
+}
 @import '../node_modules/bootstrap/scss/bootstrap.scss'
