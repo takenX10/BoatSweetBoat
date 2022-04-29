@@ -1,0 +1,37 @@
+@import '../style.scss';
+
+.header-logo {
+    font-size: 18px;
+    display: inline-block;
+    background-color: $secondary;
+    color: $foreground;
+    line-height: 1;
+    padding: 8px 0;
+    margin-right: 4px;
+    border-radius: 50%;
+    text-align: center;
+    width: 36px;
+    height: 36px;
+    box-shadow: 2px 2px $foreground;
+    transition: 0.3s
+}
+
+.navbar-scroll {
+    background-color: #195c658a;
+    transition: .3s;
+}
+
+.navbar-scroll.scrolled {
+    background-color: red;
+    transition: .3s;
+}
+
+.header-logo:hover {
+    color: $secondary;
+    text-decoration: none;
+}
+
+.page-referer {
+    color: $foreground !important;
+    text-shadow: 3px 3px $secondary;
+}

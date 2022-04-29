@@ -1,0 +1,29 @@
+@import '@/style.scss';
+
+.full-button {
+    align-items: center;
+    border: 5px solid $foreground;
+    color: $foreground;
+    background-color: transparent;
+    min-height: 30vh;
+    transition: .3s;
+}
+
+.full-button:hover{
+    scale: 1.05;
+    color: $secondary;
+    border-color: $secondary;
+}
+
+.buttons-container {
+    height: 100vh;
+}
+
+@media (min-width: 768px) { /* Standard medium bootstrap media size */
+    .heading-container {
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    
+}

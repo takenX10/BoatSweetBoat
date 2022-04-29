@@ -1,0 +1,14 @@
+$background: snow;
+$secondary-background: #195C65;
+$foreground: #FFDDBE;
+$secondary: #A56326;
+$shadow: #143C42;
+
+
+@import '../node_modules/bootstrap/scss/bootstrap.scss';
+body {
+    background-color: $background;
+    color: $foreground;
+    padding: 0 !important;
+    margin: 0 !important;
+}

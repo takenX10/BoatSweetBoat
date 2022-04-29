@@ -1,0 +1,26 @@
+/* Scorrimento */
+@import '@/style.scss';
+
+.card-container {
+    background-color: $secondary;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    box-shadow: 10px -10px 15px $shadow;
+    border-radius: 15px;
+}
+
+.card-image{
+    width: 100vw;
+    max-height: 75vh;
+    object-fit:contain;
+    object-position: center;
+}
+
+.card-position{
+    color: $foreground;
+}
+
+.card-description{
+    color: $foreground;
+}
