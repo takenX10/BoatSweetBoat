@@ -1,6 +1,5 @@
 import './footer.css';
-import { library, icon } from '@fortawesome/fontawesome-svg-core'
-
+import '@fortawesome/fontawesome-free/css/all.min.css';
 
 const Footer = () => {
     return (
