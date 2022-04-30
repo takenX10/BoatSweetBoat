@@ -7,12 +7,12 @@ const HomeTemplate = () => {
   return (
     <>
       <Navbar />
-      <header class="masthead">
+      <header class="d-flex masthead justify-content-center align-items-center">
             <div class="container position-relative">
                 <div class="row justify-content-center">
-                    <div class="col-xl-6">
+                    <div class="col-xl-6 align-items-center">
                         <div class="text-center text-white">
-                            <h1 class="mb-5">Sailing soul and liveaboard</h1>
+                            <h1>Sailing soul and liveaboard</h1>
                         </div>
                     </div>
                 </div>

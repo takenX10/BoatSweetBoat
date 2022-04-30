@@ -11306,6 +11306,8 @@ textarea.form-control-lg {
 header.masthead {
   position: relative;
   background-color: #343a40;
+  width: 100vw;
+  height: 80vh;
   background: url("http://localhost:3000/images/boat.jpeg") no-repeat center center;
   background-size: cover;
   padding-top: 8rem;
