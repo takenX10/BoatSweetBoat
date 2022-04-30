@@ -14,9 +14,8 @@ export default function App() {
   return (
     <BrowserRouter>
       <Routes>
-          <Route index element={<Home />} />
+          <Route index element={<HomeTemplate />} />
           <Route path="/about" element={<About />} />
-          <Route path="/home2" element={<HomeTemplate />} />
           <Route path="/esplora-imbarcazione/*" element={<EsploraImbarcazione />} />
           <Route path="/test" element={<Test />} />
       </Routes>

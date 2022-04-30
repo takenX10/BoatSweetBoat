@@ -15,7 +15,7 @@ const Navbar = () => {
                 <a className="navbar-brand" href="/">Home</a>
                 </li>
                 <li class="nav-item">
-                <a className="navbar-brand" href="#signup">Esplora l'imbarcazione</a>
+                <a className="navbar-brand" href="/esplora-imbarcazione/">Esplora l'imbarcazione</a>
                 </li>
                 <li class="nav-item">
                 <a className="navbar-brand" href="#footerTemplate">Contattami</a>
