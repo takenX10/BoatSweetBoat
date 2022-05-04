@@ -1,34 +1,36 @@
 import './home.scss';
-const Navbar = () => {
+import "./Navbar.scss"
+export default function Navbar() {
     return (
         <>
-            <nav class="navbar navbar-expand-sm fixed-top navbar-light bg-light">
-    <div class="container">
-    <a className="navbar-brand col-8" href="#!"><img src='http://localhost:3000/images/logo.png' /></a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar1">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse col-4" id="navbar1">
-            <ul class="navbar-nav nav nav-fill w-100">
-
-                <li class="nav-item">
-                <a className="navbar-brand" href="/">Home</a>
-                </li>
-                <li class="nav-item">
-                <a className="navbar-brand" href="/esplora-imbarcazione/">Esplora l'imbarcazione</a>
-                </li>
-                <li class="nav-item">
-                <a className="navbar-brand" href="#footerTemplate">Contattami</a>
-                </li>
-            </ul>
-        </div>
-    </div>
-</nav>
+            <nav className="navbar navbar-expand-lg">
+                <div className="container-fluid align-items-center flex-nowrap m-0 p-0">
+                    <a className="navbar-brand logo my-0 p-0 mx-2 ms-2" href="#"><b>BoatSweetBoat</b></a>
+                    <button className="navbar-toggler m-0 p-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span className="navbar-toggler-icon me-3"><i className="fa-solid fa-bars hamburger-icon"></i></span>
+                    </button>
+                    <div class="collapse navbar-collapse justify-content-end me-5" id="navbarNav">
+                        <ul className="navbar-nav">
+                            <li className="nav-item mx-3">
+                                <a className="nav-link active" aria-current="page" href="#">Home</a>
+                            </li>
+                            <li className="nav-item mx-3">
+                                <a className="nav-link" href="#">Esplora Barca</a>
+                            </li>
+                            <li className="nav-item mx-3">
+                                <a className="nav-link" href="#">Contattami</a>
+                            </li>
+                            <li className="nav-item mx-3">
+                                <a className="nav-link" href="#">FAQ</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
         </>
     );
 };
 
-export default Navbar;
 /*
 <nav className="navbar navbar-light bg-light fixed-top navbar-scroll">
            <div className="container col-8">

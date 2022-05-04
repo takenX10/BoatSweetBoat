@@ -1,0 +1,24 @@
+
+
+@import '@/style.scss';
+
+.navbar {
+    height: 15vh;
+    background-color: $dark-acqua;
+}
+
+.logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 3.052rem;
+    color: $white;
+}
+.hamburger-icon {
+    vertical-align: bottom;
+    color: $white;
+    font-size: 1.953rem;
+}
+
+.nav-link {
+    color: $white;
+    font-size: 1.563rem;
+}
