@@ -3,17 +3,16 @@
 
 
 .hero-container {
-    height: 85vh;
+    height: 100vh;
     width: 100vw;
+    overflow: hidden;
 }
 
-
-.hero-image {
-    object-fit:contain !important;
-    object-position: center;
-    width: auto;
-    max-height: 85vh;
-    z-index: -1;
+.hero-image-container {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
 }
 
 .hero-row {
@@ -23,7 +22,7 @@
 
 .black-rect {
     width: 100vw;
-    height: 85vh;
+    height: 100vh;
     position: absolute;
     top: 0;
     left: 0;
@@ -34,7 +33,7 @@
 
 .hero-grid {
     width: 100vw;
-    height: 85vh;
+    height: 100vh;
     top: 0;
     left: 0;
     position: absolute;
@@ -58,4 +57,117 @@
     color: $white;
     grid-area: 2 / 1 / span 1 / span 1;
     text-align: end;
+}
+
+
+.about-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 3.052rem !important;   
+}
+.about-title:after {
+    content: "";
+    display: block;
+    margin: 0; 
+    width: 60%; 
+    padding-top: 20px; 
+    border-bottom: 3px solid $acqua;
+}
+
+.about-description {
+    color: $text-black;
+    line-height: 300%;
+}
+
+.esplora-container {
+    position: relative;
+    width: 100vw;
+    height: 85vh;
+    overflow: hidden;
+}
+
+.esplora-img-container {
+    width: 100vw;
+    height: 85vh;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-position: center;
+    background-size: cover;
+}
+.esplora-grid {
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: grid;
+    width: 100vw;
+    height: 85vh;
+    grid-template: 2fr 1fr 4fr / 2fr 1fr;
+}
+.esplora-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 3.052rem !important;   
+    grid-area: 1 / 1 / span 1 / span 1;
+    align-self: end;
+}
+
+.esplora-description {
+    grid-area: 2 / 1 / span 1 / span 1;
+    color: $text-black;
+    align-self: start;
+}
+
+.esplora-button {
+    display: block;
+    width:min-content;
+    height: min-content;
+    color: $white;
+    grid-area: 3 / 1 / span 1 / span 1;
+    text-align: center;
+    background-color: $dark-acqua;
+    border-width: 0px;
+    border-radius:15px;
+}
+
+.sponsor-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 3.052rem !important; 
+}
+.sponsor-title:after {
+    content: "";
+    display: block;
+    margin: 0; 
+    width: 50%; 
+    padding-top: 20px; 
+    border-bottom: 3px solid $acqua;
+}
+
+.sponsor-image-container {
+    width: 100%;
+    height:100%;
+    overflow: hidden;
+}
+.sponsor-image {
+    width:100%;
+    height: auto;
+}
+
+.icon {
+    cursor: pointer;
+}
+
+.sardegna {
+    background: rgb(255,255,255);
+    background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(18,135,139,1) 54%); 
+    width: 100vw;
+    height: 90vh;
+    position: relative;
+}
+
+.sardegna-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
 }

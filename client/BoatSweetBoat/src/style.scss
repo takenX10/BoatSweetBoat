@@ -58,4 +58,7 @@ small, .text_small {
     font-size: 0.8rem;
 }
 
+b {
+    color: $acqua;
+}
 @import '@/../node_modules/bootstrap/scss/bootstrap.scss';

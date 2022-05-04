@@ -5,7 +5,7 @@ import { faBars } from '@fortawesome/free-solid-svg-icons';
 export default function Navbar() {
     return (
         <>
-            <nav className="navbar navbar-expand-lg">
+            <nav className="navbar navbar-expand-lg fixed-top">
                 <div className="container-fluid align-items-center flex-nowrap m-0 p-0">
                     <b><a className="navbar-brand logo my-0 p-0 mx-2 ms-2" href="#">BoatSweetBoat</a></b>
                     <button className="navbar-toggler m-0 p-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
