@@ -3,10 +3,21 @@ import Footer from '@/layouts/Footer';
 import './Home.scss';
 
 
-const Hero = ({img}) => {
+const Hero = ({img, imgAlt}) => {
     return (
         <>
-            <h1>Ciao</h1>
+            <div className="container-fluid hero-container mx-0 px-0">
+                <div className="row hero-row mx-0">
+                    <div className="col px-0">
+                        <img src={img} className="hero-image" alt={imgAlt}></img>
+                        <div className="black-rect" aria-roledescription='spacer'></div>
+                        <div className="d-grid hero-grid">
+                            <h1 className="hero-title m-3">Marta<br/> Magnano</h1>
+                            <h3 className="hero-description m-3">Per chi ama <br/><b>viaggiare</b></h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </>
     );
 };
@@ -17,7 +28,7 @@ export default function Home(){
     return (
         <>
             <Navbar />
-            <Hero img=""/>
+            <Hero img="/images/boat.jpeg" imgAlt=""/>
     <section class="features-icons bg-light text-center">
             <div class="container">
                 <div class="row">

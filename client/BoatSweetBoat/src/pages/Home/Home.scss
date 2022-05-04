@@ -1,2 +1,61 @@
 
-@import "@/style.scss"
+@import "@/style.scss";
+
+
+.hero-container {
+    height: 85vh;
+    width: 100vw;
+}
+
+
+.hero-image {
+    object-fit:contain !important;
+    object-position: center;
+    width: auto;
+    max-height: 85vh;
+    z-index: -1;
+}
+
+.hero-row {
+    height: 100%;
+    position: relative;
+}
+
+.black-rect {
+    width: 100vw;
+    height: 85vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #3f3a3a84;
+    z-index: 0;
+}
+
+
+.hero-grid {
+    width: 100vw;
+    height: 85vh;
+    top: 0;
+    left: 0;
+    position: absolute;
+    grid-template: 4fr 3fr / 1fr;
+    justify-content: end;
+}
+
+.hero-title {
+    color: $white;
+    grid-area: 1 / 1 / span 1 / span 1;
+    position: absolute;
+    align-self: end;
+    top: 10;
+    right: 0;
+    font-family: 'Playfair Display', serif;
+    font-size: 64px !important;
+    text-align: end;
+}
+
+.hero-description {
+    color: $white;
+    grid-area: 2 / 1 / span 1 / span 1;
+    text-align: end;
+}
