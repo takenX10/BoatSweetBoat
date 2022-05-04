@@ -7,15 +7,27 @@
     background-color: $dark-acqua;
 }
 
-.logo {
+.navbar-brand {
     font-family: 'Playfair Display', serif;
-    font-size: 3.052rem;
+    text-decoration: none;
+    font-size: 3.052rem !important;
     color: $white;
+    vertical-align: top;
+    transition: .3s;
 }
+
+.navbar-brand:hover {
+    color: $acqua;
+}
+
 .hamburger-icon {
-    vertical-align: bottom;
     color: $white;
     font-size: 1.953rem;
+    transition: .3s;
+}
+
+.hamburger-icon:hover {
+    color: $acqua;
 }
 
 .nav-link {

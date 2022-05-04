@@ -1,76 +1,95 @@
-import Navbar from '../../layouts/Navbar';
-import Footer from '../../layouts/Footer';
+import Navbar from '@/layouts/Navbar';
+import Footer from '@/layouts/Footer';
+import './Home.scss';
 
-import './home.scss';
 
-const HeadingImage = ({imageLabel}) =>{
-  return (
-    <div className="container-fluid p-0 m-0">
-      <div className="row p-0 m-0">
-        <div className="heading-image" role="img" aria-label={imageLabel}></div>
-      </div>
-    </div>
-  );
-}
-
-const Description = ({ title, description }) => {
-  return(
-    <div className="container-fluid justify-content-center my-5 description-container p-4 ps-0">
-        <div className="row text-center justify-content-center">
-            <div className="col-1 spacer"></div>
-            <div className="col-11 col-md-10 col-lg-9 justify-content-center content-div py-3">
-              <h2 className='text-start fs-1 mb-4 title-description'><i><b>{title}</b></i></h2>
-              <p className='fs-3 text-start'>{description}</p>
-            </div>
-            <div className="d-hidden d-md-block col-md-1 col-lg-2"></div>
-        </div>
-    </div>
-  );
-}
-
-const SponsorLogo = ({image, alt}) => {
-  return (
-    <div className="col-4">
-      <img src={image} className='img-fluid' alt={alt}></img>
-    </div>
-  );
-}
-
-const Sponsor = ({sponsorList}) => {
-  return (
-    <div className="container-fluid p-5">
-        <div className="row text-center justify-content-center b">
-            <div className="col-9">
-              <h2 className='text-end fs-1 mb-4 title-description'><i><b>SPONSOR</b></i></h2>
-            </div>
-            { sponsorList.map(sponsor => <SponsorLogo image={sponsor.image} alt={sponsor.alt} />) }
-        </div>
-      </div>
-  );
-}
-
-const Home = () => {
-  let title = 'MARTA MAGNANO';
-  let descriptionText = `Lorem ipsum dolor sit, amet consectetur adipisicing elit. Explicabo veritatis consectetur iusto quam nulla, exercitationem ipsam neque eum suscipit ad aut minus ipsum nemo? Omnis dolore non sit neque voluptatum?Lorem ipsum, dolor sit amet consectetur adipisicing elit. Necessitatibus consectetur reprehenderit nesciunt consequuntur sed rerum libero dolores itaque dolore excepturi nisi nam consequatur doloribus architecto est culpa, autem minus illo!`;
-  let sponsorList = [
-    {
-      'image':'/images/slam-logo.jpeg',
-      'alt':'alt2'
-    },
-    {
-      'image':'/images/slam-logo.jpeg',
-      'alt':'alt2'
-    }
-  ];
-  return (
-    <>
-      <HeadingImage imageLabel={'Immagine principale che raffigura la barca di Marta'} />
-      <Navbar />
-      <Description title={title} description={descriptionText}/>
-      <Sponsor sponsorList={sponsorList}/>
-      <Footer />
-    </>
-  );
+const Hero = ({img}) => {
+    return (
+        <>
+            <h1>Ciao</h1>
+        </>
+    );
 };
 
-export default Home;
+
+
+export default function Home(){
+    return (
+        <>
+            <Navbar />
+            <Hero img=""/>
+    <section class="features-icons bg-light text-center">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4">
+                        <div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3">
+                            <div class="features-icons-icon d-flex"><i class="bi-window m-auto text-primary"></i></div>
+                            <h3>Fully Responsive</h3>
+                            <p class="lead mb-0">This theme will look great on any device, no matter the size!</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3">
+                            <div class="features-icons-icon d-flex"><i class="bi-layers m-auto text-primary"></i></div>
+                            <h3>Bootstrap 5 Ready</h3>
+                            <p class="lead mb-0">Featuring the latest build of the new Bootstrap 5 framework!</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="features-icons-item mx-auto mb-0 mb-lg-3">
+                            <div class="features-icons-icon d-flex"><i class="bi-terminal m-auto text-primary"></i></div>
+                            <h3>Easy to Use</h3>
+                            <p class="lead mb-0">Ready to use with your own content, or customize the source files!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="showcase">
+            <div class="container-fluid p-0">
+                <div class="row g-0">
+                    <div class="col-lg-6 order-lg-2 text-white showcase-img" id='marta-img'></div>
+                    <div class="col-lg-6 order-lg-1 my-auto showcase-text">
+                        <h2>Marta Magnano</h2>
+                        <p class="lead mb-0">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Explicabo veritatis consectetur iusto quam nulla, exercitationem ipsam neque eum suscipit ad aut minus ipsum nemo? Omnis dolore non sit neque voluptatum?Lorem ipsum, dolor sit amet consectetur adipisicing elit. Necessitatibus consectetur reprehenderit nesciunt consequuntur sed rerum libero dolores itaque dolore excepturi nisi nam consequatur doloribus architecto est culpa, autem minus illo!</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row g-0">
+                    <div class="col-lg-6 text-white showcase-img" id="sponsor-img"></div>
+                    <div class="col-lg-6 my-auto showcase-text">
+                        <h2>Sponsor</h2>
+                        <p class="lead mb-0">Newly improved, and full of great utility classes, Bootstrap 5 is leading the way in mobile responsive web development! All of the themes on Start Bootstrap are now using Bootstrap 5!</p>
+                    </div>
+                </div>
+        </section>
+        <section class="testimonials text-center bg-light">
+            <div class="container">
+                <h2 class="mb-5">What people are saying...</h2>
+                <div class="row">
+                    <div class="col-lg-4">
+                        <div class="testimonial-item mx-auto mb-5 mb-lg-0">
+                            <h5>Margaret E.</h5>
+                            <p class="font-weight-light mb-0">"This is fantastic! Thanks so much guys!"</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="testimonial-item mx-auto mb-5 mb-lg-0">
+                            <h5>Fred S.</h5>
+                            <p class="font-weight-light mb-0">"Bootstrap is amazing. I've been using it to create lots of super nice landing pages."</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="testimonial-item mx-auto mb-5 mb-lg-0">
+                            <h5>Sarah W.</h5>
+                            <p class="font-weight-light mb-0">"Thanks so much for making these free resources available to us!"</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+            <Footer />
+        </>
+    );
+};
