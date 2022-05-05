@@ -38,7 +38,7 @@ export default function Navbar() {
                                 <a className="nav-link" href="/esplora-barca">Esplora Barca</a>
                             </li>
                             <li className="nav-item mx-3">
-                                <a className="nav-link" href="/contattami">Contattami</a>
+                                <a className="nav-link" href="#contattami">Contattami</a>
                             </li>
                             <li className="nav-item mx-3">
                                 <a className="nav-link" href="/faq">FAQ</a>
