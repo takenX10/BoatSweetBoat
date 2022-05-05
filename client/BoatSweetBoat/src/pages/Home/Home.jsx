@@ -66,41 +66,43 @@ const EsploraLink = ({ img, imgAlt }) => {
 
 const ContactForm = () => {
     return (
-        <form name='contactForm' id='contactForm' onSubmit={validateForm}>
-                        <div className="form-group">
-                            <label htmlFor="exampleFormControlInput1">Email</label>
-                            <input type="email" name='email'  className="form-control" required id="exampleFormControlInput1" placeholder="name@example.com" />
-                        </div>
-                        <div className="form-group">
-                            <label htmlFor="exampleFormControlInput2">Nome</label>
-                            <input type="name" name='name' className="form-control" required id="exampleFormControlInput3" placeholder="Marco Rossi" />
-                        </div>
-                        <div className="form-group">
-                            <label htmlFor="exampleFormControlTextarea1">Domanda</label>
-                            <textarea className="form-control" name='message' required id="exampleFormControlTextarea1" rows="6"></textarea>
-                        </div>
-                        <button type='submit' className='esplora-button ms-5 p-3'>Invia!</button>
-                    </form>
+        <div id="contattami">
+            <form name='contactForm' id='contactForm' onSubmit={validateForm}>
+                <div className="form-group">
+                    <label htmlFor="exampleFormControlInput1">Email</label>
+                    <input type="email" name='email' className="form-control" required id="exampleFormControlInput1" placeholder="name@example.com" />
+                </div>
+                <div className="form-group">
+                    <label htmlFor="exampleFormControlInput2">Nome</label>
+                    <input type="name" name='name' className="form-control" required id="exampleFormControlInput3" placeholder="Marco Rossi" />
+                </div>
+                <div className="form-group">
+                    <label htmlFor="exampleFormControlTextarea1">Domanda</label>
+                    <textarea className="form-control" name='message' required id="exampleFormControlTextarea1" rows="6"></textarea>
+                </div>
+                <button type='submit' className='esplora-button ms-5 p-3'>Invia!</button>
+            </form>
+        </div>
     );
-  };
+};
 
 
 const Sardegna = () => {
     const image = "/images/sardegna.png";
-    
+
     return (
         <>
             <div className="container-fluid sardegna my-5">
                 <div className="col-12 col-lg-6 sardegna-bg" style={{ backgroundImage: `url(${image})` }}>
                 </div>
-                
+
                 <div className="col-12 col-lg-6 sardegna-form">
-                    
+
                 </div>
             </div>
         </>
     );
-    
+
 };
 /*
     {
@@ -229,7 +231,7 @@ export default function Home() {
             <EsploraLink img="/images/front-boat.jpeg" imgAlt='' />
             <Sponsor imgList={sponsorList} />
             <Sardegna />
-            <ContactForm />
+            <ContactForm name="contattami" />
             <Footer />
         </>
     );
