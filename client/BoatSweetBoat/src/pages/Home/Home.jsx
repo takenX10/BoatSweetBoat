@@ -7,7 +7,7 @@ import {faChevronLeft, faChevronRight} from '@fortawesome/free-solid-svg-icons';
 import './Home.scss';
 
 
-const   Hero = ({img, imgAlt}) => {
+const Hero = ({img, imgAlt}) => {
     return (
         <>
             <div className="container-fluid hero-container mx-0 px-0">
@@ -15,9 +15,9 @@ const   Hero = ({img, imgAlt}) => {
                     <div className="col px-0 hero-image-container" style={{backgroundImage: `url(${img})`}}>
 
                         <div className="black-rect" aria-roledescription='spacer'></div>
-                        <div className="d-grid hero-grid">
-                            <h1 className="hero-title m-3">Marta<br/> Magnano</h1>
-                            <h3 className="hero-description m-3">Per chi ama <br/><b>viaggiare</b></h3>
+                        <div className="d-grid hero-grid px-lg-5">
+                            <h1 className="hero-title m-3 mx-lg-5">Marta<br/> Magnano</h1>
+                            <h3 className="hero-description m-3 mx-lg-5">Per chi ama <br/><b>viaggiare</b></h3>
                         </div>
                     </div>
                 </div>
@@ -27,18 +27,18 @@ const   Hero = ({img, imgAlt}) => {
 };
 
 
-const About = ({title, description}) => {
+const About = ({img}) => {
     return (
         <>
-            <div className="container-fluid my-5 ps-5">
-                <div className="row">
-                    <div className="col">
+            <div className="container-fluid px-4 px-lg-5 about-container">
+                <div className="row about-row">
+                    <div className="col px-2 py-5 px-lg-5 about-text-container">
                         <h1 className="about-title my-5">Chi sono?</h1>
-                        <p className='about-description text-wrap my-5'>
+                        <p className='about-description text-wrap'>
                             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Recusandae, id rem vero sequi quasi, commodi eveniet eaque quod at possimus consectetur error perferendis omnis itaque a maiores soluta. Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui nam.
                         </p>
                     </div>
-                    
+                    <div className="col d-none d-lg-flex about-image" style={{backgroundImage: `url(${img})`}}></div>
                 </div>
             </div>
         </>
@@ -51,14 +51,14 @@ const EsploraLink = ({img, imgAlt}) => {
             <div className="esplora-img-container" style={{backgroundImage: `url(${img})`}}>
             </div>
             <div className="esplora-grid">
-                <h1 className='esplora-title ps-3'>
-                    Esplora la <br/>
-                    barca
+                <h1 className='esplora-title ps-5 mt-5'>
+                    Esplora<br/>
+                    la barca
                 </h1>
-                <p className='esplora-description ps-3'>
+                <p className='esplora-description ps-5'>
                     Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
                 </p>
-                <button className='esplora-button ms-3 p-3'>Incomincia!</button>
+                <button className='esplora-button ms-5 p-3'>Incomincia!</button>
             </div>
         </div>
     );
@@ -66,9 +66,13 @@ const EsploraLink = ({img, imgAlt}) => {
 
 
 const Sardegna = () => {
+    const image = "/images/sardegna.png";
     return (
         <div className="container-fluid sardegna my-5">
-            <img src="/images/sardegna.png" alt="cartina della sardegna" className='sardegna-img'></img>
+            <div className="col-12 col-lg-6 sardegna-bg" style={{backgroundImage: `url(${image})`}}>
+            </div>
+            <div className="col-12 col-lg-6 sardegna-form">
+            </div>
         </div>
     );
 };
@@ -97,8 +101,8 @@ const Sponsor = ({imgList}) => {
                     <div className="col-12 col-lg-6">
                         <div className="container-fluid">
                             <div className="row justify-content-center align-items-center my-5">
-                                <div className="col-12">
-                                    <h1 className='sponsor-title'>Sponsor</h1>
+                                <div className="col-12 justify-content-center d-flex">
+                                    <h1 className='sponsor-title text-center p-3'>Sponsor</h1>
                                 </div>
                                 <div className="col-2 icon">
                                     <FontAwesomeIcon 
@@ -127,8 +131,8 @@ const Sponsor = ({imgList}) => {
                      <div className="col-12 col-lg-6">
                         <div className="container-fluid">
                             <div className="row justify-content-center align-items-center my-5">
-                                <div className="col-12">
-                                    <h1 className='sponsor-title'>Nomine</h1>
+                                <div className="col-12 justify-content-center d-flex  ">
+                                    <h1 className='sponsor-title p-3'>Nomine</h1>
                                 </div>
                                 <div className="col-2 icon">
                                     <FontAwesomeIcon 
@@ -195,7 +199,7 @@ export default function Home(){
         <>
             <Navbar />
             <Hero img="/images/book.jpeg" imgAlt=""/>
-            <About />
+            <About img="/images/marta.jpeg"/>
             <EsploraLink img="/images/front-boat.jpeg" imgAlt=''/>
             <Sponsor imgList={sponsorList}/>
             <Sardegna />
