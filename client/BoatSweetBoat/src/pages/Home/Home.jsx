@@ -93,11 +93,12 @@ const Sardegna = () => {
     return (
         <>
             <div className="container-fluid sardegna my-5">
-                <div className="col-12 col-lg-6 sardegna-bg" style={{ backgroundImage: `url(${image})` }}>
-                </div>
-
-                <div className="col-12 col-lg-6 sardegna-form">
-
+                <div className="row sardegna-container">
+                    <div className="col-12 col-lg-6 sardegna-bg" style={{ backgroundImage: `url(${image})` }}>
+                    </div>
+                    <div className="col-12 col-lg-6 d-flex justify-content-center align-items-center px-lg-0 px-4">
+                        <ContactForm name="contattami" />
+                    </div>
                 </div>
             </div>
         </>
@@ -231,7 +232,6 @@ export default function Home() {
             <EsploraLink img="/images/front-boat.jpeg" imgAlt='' />
             <Sponsor imgList={sponsorList} />
             <Sardegna />
-            <ContactForm name="contattami" />
             <Footer />
         </>
     );
