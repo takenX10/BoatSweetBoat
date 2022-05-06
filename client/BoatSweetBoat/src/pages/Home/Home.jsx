@@ -68,19 +68,19 @@ const ContactForm = () => {
     return (
         <div id="contattami">
             <form name='contactForm' id='contactForm' onSubmit={validateForm}>
-                <div className="form-group">
+                <div className="form-group m-3">
                     <label htmlFor="exampleFormControlInput1">Email</label>
                     <input type="email" name='email' className="form-control" required id="exampleFormControlInput1" placeholder="name@example.com" />
                 </div>
-                <div className="form-group">
+                <div className="form-group m-3">
                     <label htmlFor="exampleFormControlInput2">Nome</label>
                     <input type="name" name='name' className="form-control" required id="exampleFormControlInput3" placeholder="Marco Rossi" />
                 </div>
-                <div className="form-group">
+                <div className="form-group m-3">
                     <label htmlFor="exampleFormControlTextarea1">Domanda</label>
                     <textarea className="form-control" name='message' required id="exampleFormControlTextarea1" rows="6"></textarea>
                 </div>
-                <button type='submit' className='esplora-button ms-5 p-3'>Invia!</button>
+                <button type='submit' className='esplora-button form-button p-3 m-3'>Invia!</button>
             </form>
         </div>
     );

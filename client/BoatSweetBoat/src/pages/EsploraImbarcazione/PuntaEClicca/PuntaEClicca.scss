@@ -19,7 +19,7 @@
     height: 100%;
     object-fit: cover;
     object-position: center;
-    z-index: -1;
+    z-index: -10;
 }
 
 .grid {
@@ -33,35 +33,123 @@
 }
 
 .text-area {
-    background-color: rgba(0, 0, 0, 0.181);
-    grid-area: 1 / 3 / span 3 / span 1;
+    background: rgb(255,255,255);
+    background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(18, 135, 139, 0.66) 10%); 
+    grid-area: 1 / 3 / span 3 / span 2;
     width: 100%;
     height: 100%;
+    z-index: -5;
 }
 
+.eye {
+    grid-area: 1 / 4 / span 1 / span 1;
+    color: $white;
+    z-index: 1;
+    transition: .3s;
+    border-radius: 50%;
+}
+
+.eye:hover {
+    transform: rotate(45deg);
+}
 .arrow{
-    width: 20%;
-    height: 20%;
+    width: 100%;
+    height: 100%;
     background-color: transparent;
     border: none;
     color: $black;
     transition: .2s;
+    transform: scale(1.5);
+}
+
+.arrow:hover {
+    cursor: none;
+}
+
+.cursor-outline-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 10vw;
+    height: 10vw;
+    transform: translate(-50%,-65%);
+    border-radius: 50%;
+    z-index: -1;
+}
+.cursor-outline {
+    position: absolute;
+    top: 35%;
+    left: 20%;
+    width: 60%;
+    height: 60%;
+    border-radius: 50%;
+    background-color: #fffffe67;
+    border: 2px solid $white;
+    z-index: -1;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-name: pulse;
+}
+
+.cursor-text {
+    text-align: center;
+    width: min-content;
+    position: absolute;
+    top: 0;
+    left: auto;
+    transform: translateY(-20%);
+    font-family: 'Playfair Display', serif;
+    color: $white;
+    background-color: #12878b93;
+    border-radius: 15%;
+}
+
+.cursor-dot {
+    width: 5vw;
+    height: 5vw;
+    position: absolute;
+    top: 57.5%;
+    left: 52.5%;
+    background-color: $dark-acqua;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    transform: translate(-50%, -50%);
+    color: $white;
+    z-index: 0;
+}
+
+@keyframes pulse {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(1.3);
+    }
 }
 
 .back {
-    z-index: 100;
     grid-area: 1 / 1 / 2 / 2;
     transition: .4s;
+    background: $dark-acqua;
+    border-width: 0px;
+    color: $white;
+    z-index: 1;
 }
 
 .back:hover {
-    color: black;
-    scale: 2;
     transform: rotate(-45deg);
 }
 
 .left {
-    grid-area: 2 / 1 / span 1 / span 1;
+    grid-area: 2 / 1 / 4 / span 1;
 }
 .left:hover {
     scale: 1.3;
@@ -70,7 +158,7 @@
 }
 
 .down {
-    grid-area: 3 / 2 / span 1 /span 1;
+    grid-area: 3 / 2 / span 4 /4;
     scale:1.3;
 }
 .down:hover {
@@ -80,7 +168,7 @@
 }
 
 .right {
-    grid-area: 2 / 4 / span 1 /span 1;
+    grid-area: 2 / 4 / span 2 /span 1;
 }
 .right:hover {
     scale: 1.3;
@@ -88,21 +176,35 @@
     transform:translateY(-10%);
 }
 .up {
-    grid-area: 1 / 2 / span 1 /span 1;
+    grid-area: 1 / 2 / span 1 /span 2;
 }
 .up:hover {
     scale: 1.3;
     color: black;
     transform:translateY(20%);
 }
-.title {
-    grid-area: 1 / 3 / span 1 / span 1;
+.text-area {
+    width: 100%;
+    display: flex;
+    justify-content: center;
 }
-
+.text-container {
+    height: min-content;
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: start;
+    flex-direction: column;
+}
+.title {
+    color: $white;
+    text-decoration: underline;
+    text-align: start;
+}
 .description-text {
-    align-self: start;
-    grid-area: 2 / 3 / span 1 / span 1;
-    text-align: left;
+    text-align: start;
+    color: $white;
 }
 
 $interval: .4s;
@@ -115,11 +217,11 @@ $interval: .4s;
     transition: transform $interval ease-in-out;
 }
 .fade-left-exit {
-    z-index: -2;
+    z-index: -11;
     transform: translateX(0%);
 }
 .fade-left-exit-active {
-    z-index: -2;
+    z-index: -11;
     transform: translateX(0%);
 }
 
@@ -131,11 +233,11 @@ $interval: .4s;
     transition: transform $interval ease-in-out;
 }
 .fade-right-exit {
-    z-index: -2;
+    z-index: -11;
     transform: translateX(0%);
 }
 .fade-right-exit-active {
-    z-index: -2;
+    z-index: -11;
     transform: translateX(0%);
 }
 
@@ -147,11 +249,11 @@ $interval: .4s;
     transition: transform $interval ease-in-out;
 }
 .fade-up-exit {
-    z-index: -2;
+    z-index: -11;
     transform: translateY(0%);
 }
 .fade-up-exit-active {
-    z-index: -2;
+    z-index: -11;
     transform: translateY(0%);
 }
 
@@ -163,10 +265,10 @@ $interval: .4s;
     transition: transform $interval ease-in-out;
 }
 .fade-down-exit {
-    z-index: -2;
+    z-index: -11;
     transform: translateY(0%);
 }
 .fade-down-exit-active {
-    z-index: -2;
+    z-index: -11;
     transform: translateY(0%);
 }
