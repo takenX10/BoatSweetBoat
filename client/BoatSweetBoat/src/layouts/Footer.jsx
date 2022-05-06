@@ -1,4 +1,7 @@
 import './footer.scss';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import '@fortawesome/fontawesome-free/css/all.min.css';
+
 const Footer = () => {
     return (
 
@@ -44,7 +47,7 @@ const Footer = () => {
           <h6 class="text-uppercase fw-bold mb-4">
             Contatti
           </h6>
-          <p><i class="fas fa-home me-3"></i> Lega Navale Italiana, Via Caboto, CA, Sardegna</p>
+          <p><i class="fas fa-home me-3" />Lega Navale Italiana, Via Caboto, CA, Sardegna</p>
           <p>
             <i class="fas fa-envelope me-3"></i>
             <a class="text-reset" href="mailto:marta.boatsweetboat@gmail.com">marta.boatsweetboat@gmail.com</a>
@@ -54,7 +57,8 @@ const Footer = () => {
         <i class="fab fa-facebook-f"></i>
       </a>
       <a href="" class="me-4 text-reset">
-        <i class="fab fa-twitter"></i>
+      <i class="fa-brands fa-twitter" />
+
       </a>
       <a href="https://www.instagram.com/marta_magnano/" class="me-4 text-reset">
         <i class="fab fa-instagram"></i>
