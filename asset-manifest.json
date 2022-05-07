@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/BoatSweetBoat/static/css/main.7687d851.css",
-    "main.js": "/BoatSweetBoat/static/js/main.62473714.js",
+    "main.js": "/BoatSweetBoat/static/js/main.cdfb1066.js",
     "index.html": "/BoatSweetBoat/index.html",
     "main.7687d851.css.map": "/BoatSweetBoat/static/css/main.7687d851.css.map",
-    "main.62473714.js.map": "/BoatSweetBoat/static/js/main.62473714.js.map"
+    "main.cdfb1066.js.map": "/BoatSweetBoat/static/js/main.cdfb1066.js.map"
   },
   "entrypoints": [
     "static/css/main.7687d851.css",
-    "static/js/main.62473714.js"
+    "static/js/main.cdfb1066.js"
   ]
 }
