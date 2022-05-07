@@ -1,26 +1,38 @@
 /* Scorrimento */
 @import '@/style.scss';
 
+.cards-box {
+    width: 100vw;
+}
+
 .card-container {
-    background-color: #90fbff;
-    display: flex;
-    justify-content: center;
-    overflow: hidden;
-    box-shadow: 10px -10px 15px black;
-    border-radius: 15px;
+    height: 200vh;
+    width: 100vw;
 }
 
 .card-image{
     width: 100vw;
-    max-height: 75vh;
-    object-fit:contain;
-    object-position: center;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
 }
 
 .card-position{
-    color: black;
+    color: $dark;
+    font-family: 'Playfair Display', serif;
+    text-decoration: underline;
+    text-decoration-color: $acqua;
+    text-decoration-thickness: 3px;
+}
+.card-position-col {
+    width: 100vw;
+    height: min-content;
+    z-index: 10000;
+    background-color: $white;
 }
 
 .card-description{
-    color: black;
+    color: $text-black;
+    font-family: 'Alice', serif;
 }

@@ -9,6 +9,7 @@
     width: 100vw;
     height: 100vh;
     position: relative;
+    overflow: hidden;
 }
 
 .full-image {
@@ -138,7 +139,7 @@
 .back {
     grid-area: 1 / 1 / 2 / 2;
     transition: .4s;
-    background: $dark-acqua;
+    background-color: rgba(18, 135, 139, 0.66);
     border-width: 0px;
     color: $white;
     z-index: 1;
