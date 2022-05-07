@@ -5,10 +5,14 @@
 .navbar {
     background-color: $dark-acqua;
     transition: .3s;
+    width: 100vw;
 }
 
-
 .hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+.nospace {
     display: none;
 }
 .navbar-style {
@@ -45,4 +49,26 @@
 .nav-link {
     color: $white !important;
     font-size: 1.563rem;
+}
+
+.nav-expanded-link {
+    text-decoration: underline;
+    color: $white !important;
+    font-family: 'Playfair Display', serif;
+}
+
+.expanded-navbar{
+    width: 100vw;
+    height: 100vh;
+    z-index: 10000;
+    overflow: hidden;
+    background-color: $dark-acqua;
+    position: absolute;
+    display: flex;
+}
+
+.navbar-button-expanded {
+    background-color: transparent;
+    color: $white;
+    border: 0px;
 }

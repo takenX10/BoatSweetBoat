@@ -30,15 +30,15 @@ const Hero = ({ img, imgAlt }) => {
 const About = ({ img }) => {
     return (
         <>
-            <div className="container-fluid px-4 px-lg-5 about-container">
-                <div className="row about-row">
-                    <div className="col px-2 py-5 px-lg-5 about-text-container">
+            <div className="container-fluid about-container m-0 p-0">
+                <div className="row about-row justify-content-center m-0 p-0">
+                    <div className="col-10 col-lg-6 px-2 py-5 px-lg-5 about-text-container">
                         <h1 className="about-title my-5">Chi sono?</h1>
                         <p className='about-description text-wrap'>
                             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Recusandae, id rem vero sequi quasi, commodi eveniet eaque quod at possimus consectetur error perferendis omnis itaque a maiores soluta. Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui nam.
                         </p>
                     </div>
-                    <div className="col d-none d-lg-flex about-image" style={{ backgroundImage: `url(${img})` }}></div>
+                    <div className="col-0 col-lg-6 d-none d-lg-flex about-image" style={{ backgroundImage: `url(${img})` }}></div>
                 </div>
             </div>
         </>
@@ -50,15 +50,17 @@ const EsploraLink = ({ img, imgAlt }) => {
         <div className="container-fluid esplora-container">
             <div className="esplora-img-container" style={{ backgroundImage: `url(${img})` }}>
             </div>
-            <div className="esplora-grid">
-                <h1 className='esplora-title ps-5 mt-5'>
-                    Esplora<br />
-                    la barca
-                </h1>
-                <p className='esplora-description ps-5'>
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                </p>
-                <button className='esplora-button ms-5 p-3'>Incomincia!</button>
+            <div className="row esplora-row d-flex justify-content-start align-items-start mt-5">
+                <div className="col-7 esplora-col">
+                    <h1 className='esplora-title mb-2 ps-5 mt-5 text-nowrap'>
+                        Esplora<br />
+                        la barca
+                    </h1>
+                    <p className='esplora-description ps-5 mb-2'>
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                    </p>
+                    <button className='esplora-button ms-5 p-3'>Incomincia!</button>
+                </div>
             </div>
         </div>
     );
@@ -69,16 +71,16 @@ const ContactForm = () => {
         <div id="contattami">
             <form name='contactForm' id='contactForm' onSubmit={validateForm}>
                 <div className="form-group m-3">
-                    <label htmlFor="exampleFormControlInput1">Email</label>
-                    <input type="email" name='email' className="form-control" required id="exampleFormControlInput1" placeholder="name@example.com" />
+                    <label htmlFor="exampleFormControlInput1" className="fs-5"><b className='form-label'>Email</b></label>
+                    <input type="email" name='email' className="form-control" aria-label="email" required id="exampleFormControlInput1" placeholder="name@example.com" />
                 </div>
                 <div className="form-group m-3">
-                    <label htmlFor="exampleFormControlInput2">Nome</label>
-                    <input type="name" name='name' className="form-control" required id="exampleFormControlInput3" placeholder="Marco Rossi" />
+                    <label htmlFor="exampleFormControlInput2" className="fs-5"><b className='form-label'>Nome</b></label>
+                    <input type="name" name='name' aria-label="nome" className="form-control" required id="exampleFormControlInput3" placeholder="Marco Rossi" />
                 </div>
                 <div className="form-group m-3">
-                    <label htmlFor="exampleFormControlTextarea1">Domanda</label>
-                    <textarea className="form-control" name='message' required id="exampleFormControlTextarea1" rows="6"></textarea>
+                    <label htmlFor="exampleFormControlTextarea1" className="fs-5"><b className='form-label'>Domanda</b></label>
+                    <textarea className="form-control" name='message' aria-label="messaggio" required id="exampleFormControlTextarea1" rows="6"></textarea>
                 </div>
                 <button type='submit' className='esplora-button form-button p-3 m-3'>Invia!</button>
             </form>
@@ -92,7 +94,7 @@ const Sardegna = () => {
 
     return (
         <>
-            <div className="container-fluid sardegna my-5">
+            <div className="container-fluid sardegna my-5 pb-5 mb-5">
                 <div className="row sardegna-container">
                     <div className="col-12 col-lg-6 sardegna-bg" style={{ backgroundImage: `url(${image})` }}>
                     </div>
