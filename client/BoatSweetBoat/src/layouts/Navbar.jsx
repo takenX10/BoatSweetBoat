@@ -82,6 +82,11 @@ export default function Navbar() {
                         <div className="col-12 m-3">
                             <a className="nav-expanded-link fw-bold" href="/faq">FAQ</a>
                         </div>
+                        <div className="col-12 m-3">
+                            <a href="https://www.instagram.com/marta_magnano/" class="nav-link">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </Slide>
@@ -108,9 +113,9 @@ export default function Navbar() {
                                 <a className="nav-link" href="https://www.gofundme.com/f/italiaavela?utm_campaign=p_na+share-sheet&utm_medium=copy_link&utm_source=customer">Raccolta fondi</a>
                             </li>
                             <li className="nav-item mx-3">
-                            <a href="https://www.instagram.com/marta_magnano/" class="nav-link">
-                                <i class="fab fa-instagram"></i>
-                            </a>
+                                <a href="https://www.instagram.com/marta_magnano/" class="nav-link">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
                             </li>
                         </ul>
                     </div>
