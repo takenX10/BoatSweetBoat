@@ -8,7 +8,7 @@ export default function Faq() {
             <Navbar />
             <div id="main">
                 <div class="container">
-                <h1>FAQ</h1>
+                <h1 className="faq-heading-text text-start">FAQs</h1>
                     <div class="accordion" id="faq">
                         <div class="card">
                             <div class="card-header" id="faqhead1">
