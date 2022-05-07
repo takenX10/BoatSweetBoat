@@ -1,7 +1,8 @@
 import React, { useEffect, useState, useRef } from "react"
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faHouse, faArrowLeft, faArrowDown, faArrowRight, faArrowUp, faEye, faEyeSlash } from "@fortawesome/free-solid-svg-icons";
+import { faHouse, faArrowLeft, faArrowDown, faArrowRight, faArrowUp, faEye, faEyeSlash, faCircle } from "@fortawesome/free-solid-svg-icons";
+
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
 import Slide from '@mui/material/Slide';
 
@@ -93,7 +94,7 @@ export default function PuntaEClicca() {
                             <div key={type.text} className={`arrow ${type.text}`}
                                 onClick={() => { setShowMouse(false);setCurrentType(type.text); changeCurrentData(data[currentData][type.text]); }}
                                 onMouseOver={() => {setTextMouse(type.icon); setShowMouse(true); setMouseTitle(data[data[currentData][type.text]].title)}}
-                                onMouseLeave={() => { setShowMouse(false);}}
+                                onMouseLeave={() => {setTextMouse(faCircle); setShowMouse(true);}}
                             >
                             </div>
                         );

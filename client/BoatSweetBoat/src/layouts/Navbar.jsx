@@ -74,10 +74,10 @@ export default function Navbar() {
                             <a className="nav-expanded-link active fw-bold fs-1" aria-current="page" href="/">Home</a>
                         </div>
                         <div className="col-12 m-3">
-                            <a className="nav-expanded-link fs-1 fw-bold " href="/esplora-imbarcazione">Esplora Barca</a>
+                            <a className="nav-expanded-link fs-1 fw-bold" href="/esplora-imbarcazione">Esplora Barca</a>
                         </div>
                         <div className="col-12 m-3">
-                            <a className="nav-expanded-link fs-1 fw-bold " href="/#contattami">Contattami</a>
+                            <a className="nav-expanded-link fs-1 fw-bold" onClick={()=>{setExpanded(!expanded)}} href="/#contattami">Contattami</a>
                         </div>
                         <div className="col-12 m-3">
                             <a className="nav-expanded-link fw-bold" href="/faq">FAQ</a>
