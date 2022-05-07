@@ -117,7 +117,7 @@ const ContactForm = () => {
 
 
 const Sardegna = () => {
-    const image = "/images/sardegna.png";
+    const image = "/images/sardegna2.png";
 
     return (
         <>
