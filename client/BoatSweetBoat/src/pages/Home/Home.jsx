@@ -62,6 +62,8 @@ const About = ({ img }) => {
                         <p className='about-description text-wrap'>
                             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Recusandae, id rem vero sequi quasi, commodi eveniet eaque quod at possimus consectetur error perferendis omnis itaque a maiores soluta. Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui nam.
                         </p>
+
+                        
                     </div>
                     <div className="col-0 col-lg-6 d-none d-lg-flex about-image" style={{ backgroundImage: `url(${img})` }}></div>
                 </div>
@@ -188,7 +190,7 @@ const Sponsor = ({ imgList }) => {
                         <div className="container-fluid">
                             <div className="row justify-content-center align-items-center my-5">
                                 <div className="col-12 justify-content-center d-flex  ">
-                                    <h1 className='sponsor-title p-3'>Nomine</h1>
+                                    <h1 className='sponsor-title p-3'>Stampa</h1>
                                 </div>
                                 <div className="col-2 icon">
                                     <FontAwesomeIcon

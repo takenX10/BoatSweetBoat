@@ -36,19 +36,21 @@ const Footer = () => {
             <a href="#" class="text-reset">Home</a>
           </p>
           <p>
-            <a href="#!" class="text-reset">Esplora barca</a>
+            <a href="/esplora-imbarcazione" class="text-reset">Esplora imbarcazione</a>
           </p>
           <p>
             <a href="https://www.gofundme.com/f/italiaavela?utm_campaign=p_na+share-sheet&utm_medium=copy_link&utm_source=customer" class="text-reset">Raccolta fondi</a>
           </p>
-         
+          <p>
+            <a href="/faq" class="text-reset">FAQ</a>
+          </p>
         </div>
 
         <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
           <h6 class="text-uppercase fw-bold mb-4">
             Contatti
           </h6>
-          <p><i class="fas fa-home me-3" />Lega Navale Italiana, Via Caboto, CA, Sardegna</p>
+          <p><i class="fas fa-home me-3" />Lega Navale Italiana Sezione di Olbia, Viale Isola Bianca, 1, 07026 Olbia SS, Sardegna</p>
           <p>
             <i class="fas fa-envelope me-3"></i>
             <a class="text-reset" href="mailto:marta.boatsweetboat@gmail.com">marta.boatsweetboat@gmail.com</a>

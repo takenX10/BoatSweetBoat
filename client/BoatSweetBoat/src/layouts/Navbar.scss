@@ -51,6 +51,10 @@
     font-size: 1.563rem;
 }
 
+.nav-link:hover {
+    color: $acqua !important;
+}
+
 .nav-expanded-link {
     text-decoration: underline;
     color: $white !important;

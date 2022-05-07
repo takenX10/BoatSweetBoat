@@ -93,9 +93,7 @@ export default function Navbar() {
                     </button>
                     <div className="collapse navbar-collapse justify-content-end me-5" id="navbarNav">
                         <ul className="navbar-nav">
-                            <li className="nav-item mx-3">
-                                <a className="nav-link active" aria-current="page" href="/">Home</a>
-                            </li>
+                           
                             <li className="nav-item mx-3">
                                 <a className="nav-link" href="/esplora-imbarcazione">Esplora Barca</a>
                             </li>
@@ -104,6 +102,15 @@ export default function Navbar() {
                             </li>
                             <li className="nav-item mx-3">
                                 <a className="nav-link" href="/faq">FAQ</a>
+                            </li>
+                            
+                            <li className="nav-item mx-3">
+                                <a className="nav-link" href="https://www.gofundme.com/f/italiaavela?utm_campaign=p_na+share-sheet&utm_medium=copy_link&utm_source=customer">Raccolta fondi</a>
+                            </li>
+                            <li className="nav-item mx-3">
+                            <a href="https://www.instagram.com/marta_magnano/" class="nav-link">
+                                <i class="fab fa-instagram"></i>
+                            </a>
                             </li>
                         </ul>
                     </div>
