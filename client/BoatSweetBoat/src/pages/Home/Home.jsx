@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Navbar from '@/layouts/Navbar';
 import Footer from '@/layouts/Footer';
+import TypeWriterEffect from 'react-typewriter-effect';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronLeft, faChevronRight } from '@fortawesome/free-solid-svg-icons';
 import { validateForm } from './ContactFormValidation';
@@ -17,7 +18,31 @@ const Hero = ({ img, imgAlt }) => {
                         <div className="black-rect" aria-roledescription='spacer'></div>
                         <div className="d-grid hero-grid px-lg-5">
                             <h1 className="hero-title m-3 mx-lg-5">Marta<br /> Magnano</h1>
-                            <h3 className="hero-description m-3 mx-lg-5">Per chi ama <br /><b>viaggiare</b></h3>
+                            <h3 className="hero-description m-3 mx-lg-5">Per chi ama <br />
+                                <b>
+                                    <TypeWriterEffect
+                                        textStyle={{
+                                            fontFamily: 'Playfair Display',
+                                            color: '#1ac0c6',
+                                            fontWeight: 500,
+                                            fontSize: '2.441rem',
+                                            textAlign: 'end'
+                                        }}
+                                        startDelay={1000}
+                                        cursorColor="#12878b"
+                                        multiText={[
+                                            'viaggiare',
+                                            'navigare',
+                                            'veleggiare',
+                                            'esplorare',
+                                            'marta',
+                                        ]}
+                                        multiTextDelay={3000}
+                                        multiTextLoop={true}
+                                        typeSpeed={100}
+                                    />
+                                </b>
+                            </h3>
                         </div>
                     </div>
                 </div>
