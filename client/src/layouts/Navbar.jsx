@@ -1,5 +1,6 @@
 import "./Navbar.scss"
 import React, { useState, useEffect, useRef } from 'react';
+import { HashLink } from 'react-router-hash-link';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from '@fortawesome/free-solid-svg-icons';
 import Slide from '@mui/material/Slide'
@@ -35,10 +36,6 @@ export default function Navbar() {
         }
     }, [scrolled])
 
-    useEffect(()=> {
-        console.log(currentView);
-    }, [currentView]);
-
     function disableScrolling(){
         var x=window.scrollX;
         var y=window.scrollY;
@@ -57,9 +54,6 @@ export default function Navbar() {
         }
     }, [expanded]);
 
-    useEffect(()=>{
-        console.log(currentView);
-    }, [currentView]);
     return (
         <>
             <Slide in={expanded} direction="left" mountOnEnter unmountOnExit>
@@ -71,23 +65,23 @@ export default function Navbar() {
                             </button>
                         </div>
                         <div className="col-12 m-3">
-                            <a className="nav-expanded-link active fw-bold fs-1" aria-current="page" href="/">Home</a>
+                            <a className="nav-expanded-link active fw-bold fs-1" aria-current="page" href="#/">Home</a>
                         </div>
                         <div className="col-12 m-3">
-                            <a className="nav-expanded-link fs-1 fw-bold" href="/esplora-imbarcazione">Esplora Barca</a>
+                            <a className="nav-expanded-link fs-1 fw-bold" href="#/esplora-imbarcazione">Esplora Barca</a>
                         </div>
                         <div className="col-12 m-3">
-                            <a className="nav-expanded-link fs-1 fw-bold" onClick={()=>{setExpanded(!expanded)}} href="/#contattami">Contattami</a>
+                            <HashLink to="/#contattami" className="nav-expanded-link fs-1 fw-bold" onClick={()=>{setExpanded(!expanded)}}>Contattami</HashLink>
                         </div>
                         <div className="col-12 m-3">
-                            <a className="nav-expanded-link fw-bold" href="/faq">FAQ</a>
+                            <a className="nav-expanded-link fw-bold" href="#/faq">FAQ</a>
                         </div>
                         <div className="col-12 m-3">
                             <a className="nav-expanded-link fw-bold" href="https://www.gofundme.com/f/italiaavela?utm_campaign=p_na+share-sheet&utm_medium=copy_link&utm_source=customer">Raccolta fondi</a>
                         </div>
                         <div className="col-12 m-3">
                             <a href="https://www.instagram.com/marta_magnano/" className="nav-expanded-link fw-bold">
-                                <i class="fab fa-instagram"></i>
+                                <i className="fab fa-instagram"></i>
                             </a>
                         </div>
                     </div>
@@ -95,7 +89,7 @@ export default function Navbar() {
             </Slide>
             <nav className={`navbar navbar-expand-lg ${scrolled ? "navbar-style-collapsed" : "navbar-style"} fixed-top`}>
                 <div className="container-fluid align-items-center m-0 p-0 p-lg-5">
-                    <b><a className={`navbar-brand logo my-0 p-0 mx-2 ms-2 ${scrolled ? "hidden" : ""}`} ref={navbarTitle} href="/">Boat Sweet Boat</a></b>
+                    <b><a className={`navbar-brand logo my-0 p-0 mx-2 ms-2 ${scrolled ? "hidden" : ""}`} ref={navbarTitle} href="#/">Boat Sweet Boat</a></b>
                     <button className="navbar-toggler m-0 p-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" onClick={() => { setCurrentView({top: window.pageYOffset, left: window.pageXOffset});setExpanded(!expanded); }}>
                         <span className="navbar-toggler-icon me-4"><FontAwesomeIcon className="hamburger-icon" icon={faBars} /></span>
                     </button>
@@ -103,21 +97,21 @@ export default function Navbar() {
                         <ul className="navbar-nav">
                            
                             <li className="nav-item mx-3">
-                                <a className="nav-link" href="/esplora-imbarcazione">Esplora Barca</a>
+                                <a className="nav-link" href="#/esplora-imbarcazione">Esplora Barca</a>
                             </li>
                             <li className="nav-item mx-3">
-                                <a className="nav-link" href="/#contattami">Contattami</a>
+                                <HashLink className="nav-link" to="/#contattami">Contattami</HashLink>
                             </li>
                             <li className="nav-item mx-3">
-                                <a className="nav-link" href="/faq">FAQ</a>
+                                <a className="nav-link" href="#/faq">FAQ</a>
                             </li>
                             
                             <li className="nav-item mx-3">
                                 <a className="nav-link" href="https://www.gofundme.com/f/italiaavela?utm_campaign=p_na+share-sheet&utm_medium=copy_link&utm_source=customer">Raccolta fondi</a>
                             </li>
                             <li className="nav-item mx-3">
-                                <a href="https://www.instagram.com/marta_magnano/" class="nav-link">
-                                    <i class="fab fa-instagram"></i>
+                                <a href="https://www.instagram.com/marta_magnano/" className="nav-link">
+                                    <i className="fab fa-instagram"></i>
                                 </a>
                             </li>
                         </ul>

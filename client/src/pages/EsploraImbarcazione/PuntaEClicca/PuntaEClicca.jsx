@@ -78,8 +78,8 @@ export default function PuntaEClicca() {
                     <img src={`/images/${data[currentData].image}`} alt="" className="full-image"></img>
                 </CSSTransition>
             </TransitionGroup>
-            <div className="grid">
-                <button className="p-3 back rounded-circle" onClick={() => {window.location='/'}}><FontAwesomeIcon icon={faHouse} /> </button>
+            <div className="punta-grid">
+                <button className="p-3 back rounded-circle" onClick={() => {window.location='#/'}}><FontAwesomeIcon icon={faHouse} /> </button>
                 <FontAwesomeIcon 
                     className="eye fs-3 p-3" 
                     icon={textHidden?faEyeSlash:faEye} 

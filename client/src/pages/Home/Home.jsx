@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import Navbar from '@/layouts/Navbar';
-import Footer from '@/layouts/Footer';
+import Navbar from '../../layouts/Navbar';
+import Footer from '../../layouts/Footer';
 import TypeWriterEffect from 'react-typewriter-effect';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronLeft, faChevronRight } from '@fortawesome/free-solid-svg-icons';
@@ -63,7 +63,7 @@ const About = ({ img }) => {
                             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Recusandae, id rem vero sequi quasi, commodi eveniet eaque quod at possimus consectetur error perferendis omnis itaque a maiores soluta. Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui nam.
                         </p>
 
-                        
+
                     </div>
                     <div className="col-0 col-lg-6 d-none d-lg-flex about-image" style={{ backgroundImage: `url(${img})` }}></div>
                 </div>
@@ -86,7 +86,9 @@ const EsploraLink = ({ img, imgAlt }) => {
                     <p className='esplora-description ps-5 mb-2'>
                         Lorem, ipsum dolor sit amet consectetur adipisicing elit.
                     </p>
-                    <button className='esplora-button ms-5 p-3'>Incomincia!</button>
+                    <a href='#/esplora-imbarcazione'>
+                        <button className='esplora-button ms-5 p-3'>Incomincia!</button>
+                    </a>
                 </div>
             </div>
         </div>
@@ -136,14 +138,14 @@ const Sardegna = () => {
 };
 /*
     {
-        sponsor: 
+        sponsor:
             {
-                img:"/images/name1.png", 
+                img:"/images/name1.png",
                 alt:"alt for name2.png"
             },
         nomine:
             {
-                img:"/images/name2.png", 
+                img:"/images/name2.png",
                 alt:"alt for name2.png"
             }
     }
@@ -166,7 +168,7 @@ const Sponsor = ({ imgList }) => {
                                     <FontAwesomeIcon
                                         icon={faChevronLeft}
                                         onClick={() => {
-                                            currentImage == 0 ? setCurrentImage(imgList.sponsor.length - 1) : setCurrentImage(currentImage - 1);
+                                            currentImage === 0 ? setCurrentImage(imgList.sponsor.length - 1) : setCurrentImage(currentImage - 1);
                                         }
                                         }
                                     />
@@ -178,7 +180,7 @@ const Sponsor = ({ imgList }) => {
                                     <FontAwesomeIcon
                                         icon={faChevronRight}
                                         onClick={() => {
-                                            currentImage == (imgList.sponsor.length - 1) ? setCurrentImage(0) : setCurrentImage(currentImage + 1);
+                                            currentImage === (imgList.sponsor.length - 1) ? setCurrentImage(0) : setCurrentImage(currentImage + 1);
                                         }
                                         }
                                     />
@@ -196,7 +198,7 @@ const Sponsor = ({ imgList }) => {
                                     <FontAwesomeIcon
                                         icon={faChevronLeft}
                                         onClick={() => {
-                                            currentImageNomine == 0 ? setCurrentImageNomine(imgList.nomine.length - 1) : setCurrentImageNomine(currentImageNomine - 1);
+                                            currentImageNomine === 0 ? setCurrentImageNomine(imgList.nomine.length - 1) : setCurrentImageNomine(currentImageNomine - 1);
                                         }
                                         }
                                     />
@@ -208,7 +210,7 @@ const Sponsor = ({ imgList }) => {
                                     <FontAwesomeIcon
                                         icon={faChevronRight}
                                         onClick={() => {
-                                            currentImageNomine == (imgList.nomine.length - 1) ? setCurrentImageNomine(0) : setCurrentImageNomine(currentImageNomine + 1);
+                                            currentImageNomine === (imgList.nomine.length - 1) ? setCurrentImageNomine(0) : setCurrentImageNomine(currentImageNomine + 1);
                                         }
                                         }
                                     />

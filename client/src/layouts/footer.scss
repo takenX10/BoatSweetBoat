@@ -1,7 +1,9 @@
+@import "../style.scss";
+
 #copyright{
     background-color: rgba(0, 0, 0, 0.05)
 }
 
 a.text-reset:hover {
-    color: #e96b56 !important;
+    color: $acqua !important;
 }
