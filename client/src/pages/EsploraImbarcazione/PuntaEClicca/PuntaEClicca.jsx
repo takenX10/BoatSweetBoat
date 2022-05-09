@@ -31,7 +31,7 @@ export default function PuntaEClicca() {
     const [currentData, changeCurrentData] = useState(0);
     const [mousePosition, setMousePosition] = useState({x: 0, y:0});
     const [showMouse, setShowMouse] = useState(false);
-    const [textMouse, setTextMouse] = useState(faArrowLeft);
+    const [textMouse, setTextMouse] = useState(faCircle);
     const [animatedMousePosition, setAnimatedMousePosition] = useState({x: 0, y: 0});
     const requestRef = useRef(null);
     const [mouseTitle, setMouseTitle] = useState("");
@@ -67,7 +67,7 @@ export default function PuntaEClicca() {
                 </div>
                 <h2 className="cursor-text cursor-text-outline fw-bold p-3 roundend">{mouseTitle}</h2>
             </div>
-            <div className="cursor-dot fw-bold fs-4"  style={{left: `${mousePosition.x}px`, top: `${mousePosition.y}px`, display: `${(showMouse?'flex':'none')}`}}>
+            <div className="cursor-dot fw-bold fs-4"  style={{left: `${mousePosition.x}px`, top: `${mousePosition.y}px`}}>
                 <FontAwesomeIcon className="" icon={textMouse} />
             </div>
             <TransitionGroup>
@@ -79,11 +79,19 @@ export default function PuntaEClicca() {
                 </CSSTransition>
             </TransitionGroup>
             <div className="punta-grid">
-                <button className="p-3 back rounded-circle" onClick={() => {window.location='#/'}}><FontAwesomeIcon icon={faHouse} /> </button>
+                <button 
+                    className="p-3 back rounded-circle" 
+                    onMouseOver={()=>{setTextMouse(faHouse);}}
+                    onMouseLeave={()=>{setTextMouse(faCircle);}}
+                    onClick={() => {window.location='#/'}}>
+                        <FontAwesomeIcon icon={faHouse} /> 
+                </button>
                 <FontAwesomeIcon 
                     className="eye fs-3 p-3" 
                     icon={textHidden?faEyeSlash:faEye} 
                     style={{backgroundColor: `${textHidden?"rgba(18, 135, 139, 0.66)":"transparent"}`}}
+                    onMouseOver={()=>{setTextMouse(textHidden?faEye:faEyeSlash);}}
+                    onMouseLeave={()=>{setTextMouse(faCircle);}}
                     onClick={() => {setTextHidden(!textHidden);}}
                 />
                 {types.map(type => {
@@ -94,7 +102,7 @@ export default function PuntaEClicca() {
                             <div key={type.text} className={`arrow ${type.text}`}
                                 onClick={() => { setShowMouse(false);setCurrentType(type.text); changeCurrentData(data[currentData][type.text]); }}
                                 onMouseOver={() => {setTextMouse(type.icon); setShowMouse(true); setMouseTitle(data[data[currentData][type.text]].title)}}
-                                onMouseLeave={() => {setTextMouse(faCircle); setShowMouse(true);}}
+                                onMouseLeave={() => {setTextMouse(faCircle); setShowMouse(false);}}
                             >
                             </div>
                         );
